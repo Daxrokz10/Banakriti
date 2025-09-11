@@ -10,8 +10,8 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/',require('./routes/index'));
-app.use('/products', require('./routes/products'));
+app.use('/',require('./routers'));
+
 
 
 app.listen(port,()=>{

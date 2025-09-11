@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const db = mongoose.mongoose.connect('DATABASE_URL/products', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
+require('dotenv').config();
+
+const db = mongoose.mongoose.connect(process.env.DATABASE_URL).then(() => {
     console.log('Database connected successfully');
 }).catch(err => {
     console.error('Database connection error:', err);
