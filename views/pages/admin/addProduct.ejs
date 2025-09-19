@@ -13,7 +13,7 @@
     <h2 class="mb-4 text-center">Add New Product</h2>
 
     <!-- Product Form -->
-    <form action="/admin/addProduct" method="POST" class="card p-4 shadow-sm">
+    <form action="/admin/addProduct" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
 
       <div class="mb-3">
         <label for="name" class="form-label">Product Name</label>
@@ -37,7 +37,7 @@
 
       <div class="mb-3">
         <label for="image" class="form-label">Product Image URL</label>
-        <input type="text" name="image" id="image" class="form-control" placeholder="Paste image URL" required>
+        <input type="file" name="image" id="image" class="form-control" accept="image/*" placeholder="Paste image URL" required>
       </div>
       <!-- If later you want file upload: use <input type="file" name="image"> -->
 

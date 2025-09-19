@@ -1,9 +1,11 @@
 const express = require('express');
 const adminRouter = express.Router();
 const adminCtrl = require('../controllers/adminController');
+const multer = require('multer');
+const upload = require('../middlewares/upload')
 
-// make sure these match your controller names
+
 adminRouter.get('/addProduct', adminCtrl.getAddProduct);
-adminRouter.post('/addProduct', adminCtrl.postAddProduct);
+adminRouter.post('/addProduct',upload.single('image'), adminCtrl.postAddProduct);
 
 module.exports = adminRouter;
