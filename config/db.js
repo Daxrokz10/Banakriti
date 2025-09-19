@@ -6,3 +6,5 @@ const db = mongoose.mongoose.connect(process.env.DATABASE_URL).then(() => {
 }).catch(err => {
     console.error('Database connection error:', err);
 });
+
+module.exports = db;
