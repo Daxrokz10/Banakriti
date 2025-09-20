@@ -7,7 +7,7 @@ const adminRouter = require('./adminRouter');
 
 router.use('/',homeRouter);
 router.use('/auth',authRouter);
-router.use('/product',productRouter);
+router.use('/product',productRouter); 
 router.use('/admin',adminRouter);
 
 module.exports = router;
