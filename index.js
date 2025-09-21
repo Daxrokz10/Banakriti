@@ -2,12 +2,29 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo');
+const session = require('express-session');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { db } = require('./config/db');
+const passport = require('passport');
+const initializePassport = require('./middlewares/passport');
 
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 3000;
+
+initializePassport(passport);
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'ejs');
 
