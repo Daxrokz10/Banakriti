@@ -5,10 +5,10 @@ const User = require("../models/userSchema");
 function initialize(passport) {
   passport.use(
     new LocalStrategy(
-      { usernameField: "username" },
-      async (username, password, done) => {
+      { usernameField: "email" },
+      async (email, password, done) => {
         try {
-          const user = await User.findOne({ username });
+          const user = await User.findOne({ email });
           if (!user) {
             return done(null, false, { message: "No user found" });
           }
