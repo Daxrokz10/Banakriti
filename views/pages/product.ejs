@@ -37,8 +37,9 @@
           <input type="text" class="form-control w-25 text-center" value="1">
           <button class="btn btn-outline-secondary">+</button>
         </div>
-
-        <button class="btn btn-dark w-100 mb-3">Add to Cart</button>
+        <form action="/cart/add/<%= product._id %>" method="post">
+          <button class="btn btn-dark w-100 mb-3">Add to Cart</button>
+        </form>
 
         <h5>Product Info</h5>
         <p>High-quality funky printed tote bag. Perfect for daily use.</p>

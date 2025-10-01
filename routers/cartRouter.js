@@ -6,4 +6,12 @@ const { isAuth } = require("../middlewares/auth");
 
 cartRouter.get('/',cartCtrl.getCart);
 
+cartRouter.post('/add/:productId',cartCtrl.addToCart);
+
+// Update quantity
+// router.post("/update/:productId", cartController.updateCart);
+
+// Remove product
+// router.post("/remove/:productId", cartController.removeFromCart);
+
 module.exports = cartRouter;
