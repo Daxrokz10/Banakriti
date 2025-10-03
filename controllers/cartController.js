@@ -49,3 +49,20 @@ module.exports.addToCart = async (req, res) => {
     }
   }
 };
+
+module.exports.removeCartItem = async (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.redirect('/auth/login');
+  }
+  const productId = req.params.productId;
+  try {
+    await Cart.updateOne(
+      { user: req.user._id },
+      { $pull: { items: { product: productId } } }   
+    );
+    res.redirect('/cart');
+  } catch (error) {
+    console.log(error);
+    res.redirect('/cart');
+  }
+};

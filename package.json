@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "https://banakriti.onrender.com/",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "body-parser": "^2.2.0",
@@ -27,5 +27,14 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "session": "^0.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daxrokz10/Banakriti.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Daxrokz10/Banakriti/issues"
+  },
+  "homepage": "https://github.com/Daxrokz10/Banakriti#readme"
 }
