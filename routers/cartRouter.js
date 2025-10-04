@@ -14,4 +14,7 @@ cartRouter.post('/add/:productId',cartCtrl.addToCart);
 // Remove product
 cartRouter.post("/remove/:productId", cartCtrl.removeCartItem);
 
+cartRouter.post("/cartIncrement/:productId", cartCtrl.cartIncrement);
+cartRouter.post("/cartDecrement/:productId", cartCtrl.cartDecrement);
+
 module.exports = cartRouter;

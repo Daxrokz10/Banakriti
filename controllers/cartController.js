@@ -50,6 +50,44 @@ module.exports.addToCart = async (req, res) => {
   }
 };
 
+module.exports.cartIncrement = async(req,res)=>{
+  if(!req.isAuthenticated()){
+    return res.redirect('/auth/login');
+  }
+  const productId = req.params.productId;
+  try {
+    await Cart.updateOne(
+      { user: req.user._id, "items.product": productId },
+      { $inc: { "items.$.quantity": 1 } }
+    );
+    res.redirect('/cart');
+  } catch (error) {
+    console.log(error);
+    res.redirect('/cart');
+  }
+}
+
+module.exports.cartDecrement = async(req,res)=>{
+  if(!req.isAuthenticated()){
+    return res.redirect('/auth/login');
+  } 
+  const productId = req.params.productId;
+  try {
+    const cart = await Cart.findOne({ user: req.user._id });
+    const item = cart.items.find(i => i.product.toString() === productId);
+    if (item && item.quantity > 1) {
+      await Cart.updateOne(
+        { user: req.user._id, "items.product": productId },
+        { $inc: { "items.$.quantity": -1 } }
+      );
+    }
+    res.redirect('/cart');
+  } catch (error) {
+    console.log(error);
+    res.redirect('/cart');
+  }
+}
+
 module.exports.removeCartItem = async (req, res) => {
   if (!req.isAuthenticated()) {
     return res.redirect('/auth/login');
@@ -58,7 +96,7 @@ module.exports.removeCartItem = async (req, res) => {
   try {
     await Cart.updateOne(
       { user: req.user._id },
-      { $pull: { items: { product: productId } } }   
+      { $pull: { items: { product: productId } } }
     );
     res.redirect('/cart');
   } catch (error) {
