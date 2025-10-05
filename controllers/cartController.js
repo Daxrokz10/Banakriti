@@ -50,8 +50,8 @@ module.exports.addToCart = async (req, res) => {
   }
 };
 
-module.exports.cartIncrement = async(req,res)=>{
-  if(!req.isAuthenticated()){
+module.exports.cartIncrement = async (req, res) => {
+  if (!req.isAuthenticated()) {
     return res.redirect('/auth/login');
   }
   const productId = req.params.productId;
@@ -67,10 +67,10 @@ module.exports.cartIncrement = async(req,res)=>{
   }
 }
 
-module.exports.cartDecrement = async(req,res)=>{
-  if(!req.isAuthenticated()){
+module.exports.cartDecrement = async (req, res) => {
+  if (!req.isAuthenticated()) {
     return res.redirect('/auth/login');
-  } 
+  }
   const productId = req.params.productId;
   try {
     const cart = await Cart.findOne({ user: req.user._id });

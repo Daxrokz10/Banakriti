@@ -36,6 +36,7 @@ function initialize(passport) {
   passport.userAuth = (req,res,next)=>{
     if(req.isAuthenticated()){
       res.locals.user = req.user;
+      res.locals.session = req.session;
       return next();
     }
     return res.redirect('/login');

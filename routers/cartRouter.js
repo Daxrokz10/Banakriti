@@ -8,10 +8,6 @@ cartRouter.get('/',cartCtrl.getCart);
 
 cartRouter.post('/add/:productId',cartCtrl.addToCart);
 
-// Update quantity
-// router.post("/update/:productId", cartController.updateCart);
-
-// Remove product
 cartRouter.post("/remove/:productId", cartCtrl.removeCartItem);
 
 cartRouter.post("/cartIncrement/:productId", cartCtrl.cartIncrement);
