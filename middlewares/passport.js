@@ -39,7 +39,7 @@ function initialize(passport) {
       res.locals.session = req.session;
       return next();
     }
-    return res.redirect('/login');
+    return res.redirect('/auth/login');
   }
 }
 
