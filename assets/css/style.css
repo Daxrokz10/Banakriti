@@ -5,8 +5,8 @@ Author: yaminncco
 Colors:
 	Body 		: #333
 	Headers 	: #2B2D42
-	Primary 	: #D10024
-	Dark 		: #15161D ##1E1F29
+	Primary 	: #c9ad90
+	Dark 		: #52301e #a8927c
 	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
 
 Fonts: Montserrat
@@ -75,7 +75,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #D10024;
+  color: #c9ad90;
   text-decoration: none;
   outline: none;
 }
@@ -93,7 +93,7 @@ ul, ol {
 .primary-btn {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #D10024;
+  background-color: #c9ad90;
   border: none;
   border-radius: 40px;
   color: #FFF;
@@ -177,7 +177,7 @@ textarea.input {
 
 .input-number .qty-up:hover, .input-number .qty-down:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 /*-- Select input --*/
@@ -257,8 +257,8 @@ textarea.input {
 }
 
 .input-radio input[type="radio"]:checked+label span, .input-checkbox input[type="checkbox"]:checked+label span {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
 }
 
 .input-radio input[type="radio"]:checked+label span:after {
@@ -335,13 +335,13 @@ textarea.input {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: #c9ad90;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
 .section-tab-nav li.active a {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .section-tab-nav li a:hover:after, .section-tab-nav li a:focus:after, .section-tab-nav li.active a:after {
@@ -399,7 +399,7 @@ textarea.input {
 }
 
 #breadcrumb .breadcrumb-tree li a:hover {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 /*=========================================================
@@ -413,7 +413,7 @@ textarea.input {
 #top-header {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #1E1F29;
+  background-color: #52301e;
 }
 
 .header-links li {
@@ -431,11 +431,11 @@ textarea.input {
 }
 
 .header-links li a:hover {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .header-links li i {
-  color: #D10024;
+  color: #c9ad90;
   margin-right: 5px;
 }
 
@@ -446,7 +446,7 @@ textarea.input {
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #15161D;
+  background-color: #52301e;
 }
 
 .header-logo {
@@ -482,8 +482,8 @@ textarea.input {
 .header-search form .search-btn {
   height: 40px;
   width: 100px;
-  background: #D10024;
-  color: #FFF;
+  background: #c9ad90;
+  color: #52301e;
   font-weight: 700;
   border: none;
   border-radius: 0px 40px 40px 0px;
@@ -534,7 +534,7 @@ textarea.input {
   border-radius: 50%;
   font-size: 10px;
   color: #FFF;
-  background-color: #D10024;
+  background-color: #c9ad90;
 }
 
 .header-ctn .menu-toggle {
@@ -592,7 +592,7 @@ textarea.input {
   display: inline-block;
   width: calc(50% - 0px);
   padding: 12px;
-  background-color: #D10024;
+  background-color: #c9ad90;
   color: #FFF;
   text-align: center;
   font-weight: 700;
@@ -602,7 +602,7 @@ textarea.input {
 
 .cart-dropdown .cart-btns>a:first-child {
   margin-right: -4px;
-  background-color: #1e1f29;
+  background-color: #a8927c;
 }
 
 .cart-dropdown .cart-btns>a:hover {
@@ -622,7 +622,7 @@ textarea.input {
 #navigation {
   background: #FFF;
   border-bottom: 2px solid #E4E7ED;
-  border-top: 3px solid #D10024;
+  border-top: 3px solid #c9ad90;
 }
 
 /*----------------------------*\
@@ -638,7 +638,7 @@ textarea.input {
 }
 
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
-  color: #D10024;
+  color: #c9ad90;
   background-color: transparent;
 }
 
@@ -647,7 +647,7 @@ textarea.input {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: #c9ad90;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -672,7 +672,7 @@ textarea.input {
     position: fixed;
     left: 0;
     top: 0;
-    background: #15161D;
+    background: #52301e;
     height: 100vh;
     max-width: 250px;
     width: 0%;
@@ -725,7 +725,7 @@ textarea.input {
   bottom: 0;
   left: 0px;
   width: 60%;
-  background: #D10024;
+  background: #c9ad90;
   opacity: 0.9;
   -webkit-transform: skewX(-45deg);
   -ms-transform: skewX(-45deg);
@@ -739,7 +739,7 @@ textarea.input {
   bottom: 0;
   left: 1px;
   width: 100%;
-  background: #D10024;
+  background: #c9ad90;
   opacity: 0.9;
   -webkit-transform: skewX(-45deg) translateX(-100%);
   -ms-transform: skewX(-45deg) translateX(-100%);
@@ -773,11 +773,11 @@ textarea.input {
 }
 
 .shop .shop-body h3 {
-  color: #FFF;
+  color: #52301e;
 }
 
 .shop .shop-body .cta-btn {
-  color: #FFF;
+  color: #52301e;
   text-transform: uppercase;
 }
 
@@ -807,7 +807,7 @@ textarea.input {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: #D10024e6;
+  background: #c9ad90e6;
   text-align: center;
   border-radius: 50%;
   margin: 0px 5px;
@@ -824,7 +824,7 @@ textarea.input {
 }
 
 .hot-deal .hot-deal-countdown>li>div h3 {
-  color: #FFF;
+  color: #52301e;
   margin-bottom: 0px;
 }
 
@@ -832,7 +832,7 @@ textarea.input {
   display: block;
   font-size: 10px;
   text-transform: uppercase;
-  color: #FFF;
+  color: #52301e;
 }
 
 .hot-deal p {
@@ -842,6 +842,7 @@ textarea.input {
 
 .hot-deal .cta-btn {
   margin-top: 15px;
+  color: #52301e;
 }
 
 /*=========================================================
@@ -862,8 +863,8 @@ textarea.input {
 }
 
 .product:hover {
-  -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #D10024;
-  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #D10024;
+  -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #c9ad90;
+  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #c9ad90;
 }
 
 .product .product-img {
@@ -888,13 +889,13 @@ textarea.input {
 
 .product .product-img .product-label>span.sale {
   background-color: #FFF;
-  border-color: #D10024;
-  color: #D10024;
+  border-color: #c9ad90;
+  color: #c9ad90;
 }
 
 .product .product-img .product-label>span.new {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
   color: #FFF;
 }
 
@@ -922,11 +923,11 @@ textarea.input {
 }
 
 .product .product-body .product-name>a:hover, .product .product-body .product-name>a:focus {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product .product-body .product-price {
-  color: #D10024;
+  color: #c9ad90;
   font-size: 18px;
 }
 
@@ -981,7 +982,7 @@ textarea.input {
 
 .product .product-body .product-btns>button:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
   border-radius: 50%;
 }
 
@@ -996,7 +997,7 @@ textarea.input {
   padding: 10px;
   font-size: 12px;
   line-height: 10px;
-  background: #1e1f29;
+  background: #a8927c;
   color: #FFF;
   text-transform: uppercase;
   z-index: 10;
@@ -1020,7 +1021,7 @@ textarea.input {
   right: 1px;
   bottom: 1px;
   padding: 15px;
-  background: #1e1f29;
+  background: #a8927c;
   text-align: center;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -1057,15 +1058,15 @@ textarea.input {
   width: 40px;
   height: 40px;
   line-height: 38px;
-  color: #D10024;
+  color: #c9ad90;
   opacity: 0;
   visibility: hidden;
 }
 
 .product .add-to-cart .add-to-cart-btn:hover {
   background-color: #FFF;
-  color: #D10024;
-  border-color: #D10024;
+  color: #c9ad90;
+  border-color: #c9ad90;
   padding: 0px 30px 0px 50px;
 }
 
@@ -1118,12 +1119,12 @@ textarea.input {
 }
 
 .product-widget .product-body .product-name>a:hover, .product-widget .product-body .product-name>a:focus {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product-widget .product-body .product-price {
   font-size: 14px;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product-widget .product-body .product-price .product-old-price {
@@ -1146,7 +1147,7 @@ textarea.input {
   text-align: center;
   font-size: 10px;
   padding: 0;
-  background: #1e1f29;
+  background: #a8927c;
   border: none;
   color: #FFF;
 }
@@ -1249,7 +1250,7 @@ textarea.input {
 }
 
 .noUi-connect {
-  background-color: #D10024;
+  background-color: #c9ad90;
 }
 
 .noUi-horizontal {
@@ -1262,7 +1263,7 @@ textarea.input {
   left: -6px;
   top: -4px;
   border: none;
-  background: #D10024;
+  background: #c9ad90;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 50%;
@@ -1323,12 +1324,12 @@ textarea.input {
 
 .store-grid li:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .store-grid li.active {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
   color: #FFF;
   cursor: default;
 }
@@ -1361,12 +1362,12 @@ textarea.input {
 
 .store-pagination li:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .store-pagination li.active {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
   color: #FFF;
   font-weight: 500;
   cursor: default;
@@ -1430,7 +1431,7 @@ textarea.input {
 }
 
 #product-imgs .product-preview.slick-current {
-  border-color: #D10024;
+  border-color: #c9ad90;
 }
 
 #product-imgs .slick-prev {
@@ -1480,7 +1481,7 @@ textarea.input {
 }
 
 .product-details .product-rating>i.fa-star {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product-details .review-link {
@@ -1492,7 +1493,7 @@ textarea.input {
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product-details .product-price .product-old-price {
@@ -1506,7 +1507,7 @@ textarea.input {
   text-transform: uppercase;
   font-weight: 700;
   margin-left: 30px;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .product-details .product-options {
@@ -1551,15 +1552,15 @@ textarea.input {
   width: 40px;
   height: 40px;
   line-height: 38px;
-  color: #D10024;
+  color: #c9ad90;
   opacity: 0;
   visibility: hidden;
 }
 
 .product-details .add-to-cart .add-to-cart-btn:hover {
   background-color: #FFF;
-  color: #D10024;
-  border-color: #D10024;
+  color: #c9ad90;
+  border-color: #c9ad90;
   padding: 0px 30px 0px 50px;
 }
 
@@ -1649,7 +1650,7 @@ textarea.input {
 }
 
 #product-tab .tab-nav li.active a {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 #product-tab .tab-nav li a:after {
@@ -1657,7 +1658,7 @@ textarea.input {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: #c9ad90;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -1687,7 +1688,7 @@ textarea.input {
 }
 
 .rating-avg .rating-stars>i.fa-star, .rating .rating-stars>i.fa-star {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .rating li {
@@ -1705,7 +1706,7 @@ textarea.input {
 }
 
 .rating .rating-progress>div {
-  background-color: #D10024;
+  background-color: #c9ad90;
   position: absolute;
   left: 0;
   top: 0;
@@ -1759,7 +1760,7 @@ textarea.input {
 }
 
 .reviews .review-heading .review-rating>i.fa-star {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .reviews-pagination {
@@ -1780,12 +1781,12 @@ textarea.input {
 
 .reviews-pagination li:hover {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .reviews-pagination li.active {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
   color: #FFF;
   cursor: default;
 }
@@ -1829,12 +1830,12 @@ textarea.input {
 }
 
 .review-form .input-rating .stars>label:hover:before, .review-form .input-rating .stars>label:hover~label:before {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .review-form .input-rating .stars>input:checked label:before, .review-form .input-rating .stars>input:checked~label:before {
   content: "\f005";
-  color: #D10024;
+  color: #c9ad90;
 }
 
 /*=========================================================
@@ -1900,7 +1901,7 @@ textarea.input {
 
 .order-summary .order-col .order-total {
   font-size: 24px;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .order-details .payment-method {
@@ -1918,7 +1919,7 @@ textarea.input {
 
 #newsletter.section {
   border-top: 2px solid #E4E7ED;
-  border-bottom: 3px solid #D10024;
+  border-bottom: 3px solid #c9ad90;
   margin-top: 30px;
 }
 
@@ -1960,7 +1961,7 @@ textarea.input {
   width: 160px;
   height: 40px;
   font-weight: 700;
-  background: #D10024;
+  background: #c9ad90;
   color: #FFF;
   border: none;
   border-radius: 0px 40px 40px 0px;
@@ -1994,7 +1995,7 @@ textarea.input {
 
 .newsletter .newsletter-follow li a:hover, .newsletter .newsletter-follow li a:focus {
   background-color: #E4E7ED;
-  color: #D10024;
+  color: #c9ad90;
 }
 
 /*=========================================================
@@ -2002,12 +2003,12 @@ textarea.input {
 ===========================================================*/
 
 #footer {
-  background: #15161D;
+  background: #52301e;
   color: #B9BABC;
 }
 
 #bottom-footer {
-  background: #1E1F29;
+  background: #a8927c;
 }
 
 .footer {
@@ -2031,13 +2032,13 @@ textarea.input {
 
 .footer-links li i {
   margin-right: 15px;
-  color: #D10024;
+  color: #c9ad90;
   width: 14px;
   text-align: center;
 }
 
 .footer-links li a:hover {
-  color: #D10024;
+  color: #c9ad90;
 }
 
 .copyright {
@@ -2052,7 +2053,7 @@ textarea.input {
 }
 
 .footer-payments li a {
-  color: #15161D;
+  color: #52301e;
   font-size: 36px;
   display: block;
 }
@@ -2077,8 +2078,8 @@ textarea.input {
 }
 
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #c9ad90;
+  border-color: #c9ad90;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -2123,7 +2124,7 @@ textarea.input {
 }
 
 .slick-dots li.slick-active button:before {
-  background-color: #D10024;
+  background-color: #c9ad90;
 }
 
 .custom-dots .slick-dots {
