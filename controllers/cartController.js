@@ -104,3 +104,7 @@ module.exports.removeCartItem = async (req, res) => {
     res.redirect('/cart');
   }
 };
+
+module.exports.getCheckoutPage = async(req,res)=>{
+  res.render('./checkout.ejs');
+}
