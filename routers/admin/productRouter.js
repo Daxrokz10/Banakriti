@@ -2,7 +2,7 @@ const express = require("express");
 const productRouter = express.Router();
 const passport = require('passport');
 const productCtrl = require('../../controllers/admin/productController.js');
-const Product = require('../../models/admin/productSchema');
+const Product = require('../../models/productsSchema.js');
 const upload = require('../../middlewares/upload');
 
 productRouter.get('/add',passport.userAuth,productCtrl.getAddProduct);
