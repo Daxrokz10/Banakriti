@@ -1,7 +1,7 @@
 const Product = require("../../models/productsSchema");
 
 module.exports.getAddProduct = (req,res)=>{
-    return res.render('./pages/product/addProduct');
+    return res.render('./admin/pages/product/addProduct');
 }
 module.exports.postAddProduct = async (req, res) => {
   try {
@@ -40,7 +40,7 @@ module.exports.getEdit = async (req, res) => {
       return res.status(404).send("Product not found");
     }
 
-    return res.render('./pages/product/editProduct', { product });
+    return res.render('./admin/pages/product/editProduct', { product });
   } catch (error) {
     console.error(`Error fetching product: ${error.message}`);
     return res.status(500).send("Internal Server Error");
