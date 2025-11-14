@@ -32,10 +32,15 @@ function initialize(passport) {
       {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "/auth/google/callback",
+        // allow overriding the callback URL in production (e.g. Render) via env var
+        callbackURL: process.env.GOOGLE_CALLBACK_URL || "/auth/google/callback",
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
+          // helpful debug when things go wrong in production
+          if(process.env.DEBUG && process.env.DEBUG === 'true'){
+            console.log('Google profile received:', { id: profile.id, emails: profile.emails });
+          }
 
           const email = profile.emails?.[0]?.value;
           const name = profile.displayName;
