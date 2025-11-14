@@ -3,7 +3,7 @@ const User = require('../models/userSchema');
 const bcrypt = require('bcrypt');
 
 module.exports.getLogin = (req, res) => {
-  return res.render("./pages/auth/login");
+  return res.render("./client/pages/auth/login");
 };
 module.exports.postLogin = (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
@@ -28,7 +28,7 @@ module.exports.postLogin = (req, res, next) => {
 };
 
 module.exports.getSignup = (req, res) => {
-  return res.render("./pages/auth/signup");
+  return res.render("./client/pages/auth/signup");
 };
 module.exports.postSignup = async (req, res) => {
   const { username, email, password } = req.body;

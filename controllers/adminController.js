@@ -1,7 +1,7 @@
 const Product = require("../models/productsSchema");
 
 module.exports.getAddProduct = (req, res) => {
-  return res.render("pages/admin/addProduct");
+  return res.render("client/pages/admin/addProduct");
 };
 
 module.exports.postAddProduct = async (req, res) => {

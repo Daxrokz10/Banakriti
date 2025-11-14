@@ -11,7 +11,7 @@ module.exports.getCart = async (req, res) => {
       if (!cart) {
         cart = { items: [] }; // fallback empty cart
       }
-      res.render("./pages/cart", { cart });
+      res.render("./client/pages/cart", { cart });
     } catch (err) {
       console.error(err);
       res.redirect("/");
@@ -106,5 +106,5 @@ module.exports.removeCartItem = async (req, res) => {
 };
 
 module.exports.getCheckoutPage = async(req,res)=>{
-  res.render('./checkout.ejs');
+  res.render('./client/checkout.ejs');
 }
