@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const { db } = require('./config/db');
 const passport = require('passport');
 const initializePassport = require('./middlewares/passport');

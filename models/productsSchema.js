@@ -28,6 +28,21 @@ const productSchema = new mongoose.Schema({
     tags:{
         type: [String],
         required: true,
+    },
+    sku:{
+        type: String,
+        unique: true
+    },
+    dimensions:{
+        length: Number,
+        width: Number,
+        height: Number
+    },
+    color:{
+        type: String
+    },
+    shippingTime:{
+        type: Number
     }
 });
 
