@@ -1,11 +1,9 @@
 const express = require('express');
 const adminRouter = express.Router();
-const adminCtrl = require('../controllers/adminController');
-const multer = require('multer');
-const upload = require('../middlewares/upload')
+const homeRouter = require('./admin/homeRouter');
+const productRouter = require('./admin/productRouter');
 
-
-adminRouter.get('/addProduct', adminCtrl.getAddProduct);
-adminRouter.post('/addProduct',upload.single('image'), adminCtrl.postAddProduct);
+adminRouter.use('/',homeRouter);
+adminRouter.use('/product',productRouter); 
 
 module.exports = adminRouter;
