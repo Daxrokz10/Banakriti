@@ -4,9 +4,13 @@ const passport = require('passport');
 const homeCtrl = require('../../controllers/admin/homeController.js');
 const Product = require('../../models/productsSchema.js');
 
+
+// admin panel home page
 homeRouter.get('/',passport.userAuth,homeCtrl.getHome);
+
+// admin panel view products 
 homeRouter.get('/products',passport.userAuth,homeCtrl.getProducts);
 
-homeRouter.get('/gridView',passport.userAuth,homeCtrl.getUserPage);
+homeRouter.get('/gridView',passport.userAuth,homeCtrl.getProdcutGrid);
 
 module.exports = homeRouter;

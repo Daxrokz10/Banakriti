@@ -10,7 +10,7 @@ module.exports.getProducts = async (req,res)=>{
     return res.render('./admin/pages/product/list',{products});
 }
 
-module.exports.getUserPage = async (req, res) => {
+module.exports.getProdcutGrid = async (req, res) => {
     try {
         const products = await Product.find({});
         return res.render('./admin/pages/userPage', { products });

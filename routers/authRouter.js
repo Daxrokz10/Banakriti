@@ -4,17 +4,23 @@ const authCtrl = require('../controllers/authController');
 const isAuth = require('../middlewares/auth');
 const passport = require('passport');
 
+// Show login page
 authRouter.get('/login', authCtrl.getLogin);
+
+// Handle login form submission
 authRouter.post('/login', authCtrl.postLogin);
 
+// Show signup page
 authRouter.get('/signup', authCtrl.getSignup);
+
+// Handle signup form submission
 authRouter.post('/signup', authCtrl.postSignup);
 
-// Redirect to Google for authentication
+// Start Google OAuth authentication
 authRouter.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-// Google callback route
-authRouter.get('/google/callback',(req, res, next) => {
+// Google OAuth callback route
+authRouter.get('/google/callback', (req, res, next) => {
     if (process.env.DEBUG && process.env.DEBUG === 'true') {
       console.log('Google callback query:', req.query);
     }
@@ -25,11 +31,10 @@ authRouter.get('/google/callback',(req, res, next) => {
     return next();
   },
   passport.authenticate('google', { failureRedirect: '/auth/login' }),
+  // On successful login, redirect to homepage
   function (req, res) {
-    // Successful login, redirect as needed
     res.redirect('/');
   }
 );
-
 
 module.exports = authRouter;
