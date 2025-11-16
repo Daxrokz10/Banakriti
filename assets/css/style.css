@@ -414,28 +414,29 @@ textarea.input {
 #top-header {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #52301e;
+  margin-bottom: -2px;
+  background-color: #52301e!important;
 }
 
-.header-links li {
+#top-header .list-inline li {
   display: inline-block;
   margin-right: 15px;
   font-size: 12px;
 }
 
-.header-links li:last-child {
+#top-header .list-inline li:last-child {
   margin-right: 0px;
 }
 
-.header-links li a {
+#top-header .list-inline li a {
   color: #FFF;
 }
 
-.header-links li a:hover {
+#top-header .list-inline li a:hover {
   color: #c9ad90;
 }
 
-.header-links li i {
+#top-header .list-inline li i {
   color: #c9ad90;
   margin-right: 5px;
 }
@@ -470,17 +471,19 @@ textarea.input {
   position: relative;
 }
 
-.header-search form .input-select {
+.header-search form .form-select {
   margin-right: -4px;
   border-radius: 40px 0px 0px 40px;
 }
 
-.header-search form .input {
+.header-search form .search-field {
   width: calc(100% - 260px);
-  margin-right: -4px;
+  margin-right: -4px!important;
+  margin-left: -7px;
+  border-radius: 0px;
 }
 
-.header-search form .search-btn {
+.header-search form .btn {
   height: 40px;
   width: 100px;
   background: #c9ad90;
@@ -494,7 +497,7 @@ textarea.input {
 	Cart
 \*----------------------------*/
 
-.header-ctn {
+/* .header-ctn {
   float: right;
   padding: 15px 0px;
 }
@@ -540,7 +543,7 @@ textarea.input {
 
 .header-ctn .menu-toggle {
   display: none;
-}
+} */
 
 .cart-dropdown {
   position: absolute;
@@ -2140,10 +2143,10 @@ textarea.input {
 @media only screen and (max-width: 1201px) {}
 
 @media only screen and (max-width: 991px) {
-  #top-header .header-links.pull-left {
+  #top-header .list-inline.pull-left {
     float: none !important;
   }
-  #top-header .header-links.pull-right {
+  #top-header .list-inline.pull-right {
     float: none !important;
     margin-top: 5px;
   }
