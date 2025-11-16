@@ -497,7 +497,7 @@ textarea.input {
 	Cart
 \*----------------------------*/
 
-/* .header-ctn {
+.header-ctn {
   float: right;
   padding: 15px 0px;
 }
@@ -516,6 +516,9 @@ textarea.input {
   width: 90px;
   text-align: center;
   color: #FFF;
+}
+.header-ctn a:hover{
+    color: #c9ad90!important;
 }
 
 .header-ctn>div>a>i {
@@ -543,7 +546,7 @@ textarea.input {
 
 .header-ctn .menu-toggle {
   display: none;
-} */
+}
 
 .cart-dropdown {
   position: absolute;
