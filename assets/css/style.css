@@ -72,6 +72,7 @@ a {
   font-weight: 500;
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
+  text-decoration: none;
 }
 
 a:hover, a:focus {

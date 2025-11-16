@@ -30,8 +30,7 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     sku:{
-        type: String,
-        unique: true
+        type: String    
     },
     dimensions:{
         length: Number,
@@ -46,5 +45,5 @@ const productSchema = new mongoose.Schema({
     }
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('product', productSchema);
 module.exports = Product;

@@ -5,13 +5,14 @@ module.exports.getAddProduct = (req,res)=>{
 }
 module.exports.postAddProduct = async (req, res) => {
   try {
-    const { name, price, description, category, image, stock } = req.body;
+    const { name, price, description, category, image, stock , tags } = req.body;
     const newProduct = new Product({
       name,
       price,
       description,
       category,
       stock,
+      tags : tags ? tags.split(',').map(t => t.trim()) : []
     });
     if (req.file) {
       newProduct.image = req.file.path; 
@@ -50,8 +51,8 @@ module.exports.getEdit = async (req, res) => {
 module.exports.postEdit = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, price, description, category, stock } = req.body;
-    const updatedData = { name, price, description, category, stock };
+    const { name, price, description, category, stock , tags } = req.body;
+    const updatedData = { name, price, description, category, stock , tags : tags ? tags.split(',').map(t => t.trim()) : [] };
 
     if (req.file) {
       updatedData.image = req.file.path; 
@@ -64,7 +65,7 @@ module.exports.postEdit = async (req, res) => {
       return res.status(404).send("Product not found");
     }
 
-    return res.redirect('/products');
+    return res.redirect('/admin/products');
   } catch (error) {
     console.error(`Error updating product: ${error.message}`);
     return res.status(500).send("Internal Server Error");
