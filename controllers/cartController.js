@@ -105,6 +105,15 @@ module.exports.removeCartItem = async (req, res) => {
   }
 };
 
-module.exports.getCheckoutPage = async(req,res)=>{
-  res.render('./client/checkout.ejs');
-}
+module.exports.getCheckoutPage = async (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.redirect("/auth/login");
+  }
+  try {
+    const cart = await Cart.findOne({ user: req.user._id }).populate("items.product");
+    res.render('./client/checkout.ejs', { cart });
+  } catch (error) {
+    console.error(error);
+    res.redirect('/cart');
+  }
+};
