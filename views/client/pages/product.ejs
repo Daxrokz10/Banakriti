@@ -12,30 +12,49 @@
       </div>
 
       <!-- Details -->
-      <div class="col-md-6">
-        <h2><%= product.name %></h2>
-        <p class="h4">$<%= product.price %></p>
-        <p><strong>Color:</strong> Yellow</p>
+      <div class="col-md-6 product-detail">
+        <form  action="/cart/add/<%= product._id %>" method="post">
+          <h2 class="fw-medium">
+            <%= product.name %>
+          </h2>
+          <p class="h5 fw-bolder mt-2">$<%= product.price %>
+          </p>
+          <p><strong>Color:</strong> Yellow</p>
 
-        <div class="d-flex mb-3">
-          <button class="btn btn-outline-secondary">-</button>
-          <input type="text" class="form-control w-25 text-center" value="1">
-          <button class="btn btn-outline-secondary">+</button>
-        </div>
-        <form action="/cart/add/<%= product._id %>" method="post">
-          <button class="btn btn-dark w-100 mb-3">Add to Cart</button>
+          <label for="size-s" style="margin-right:10px;">Select Size</label>
+          <div class="size-options my-4">
+            <input type="radio" id="size-s" name="size" value="S" checked>
+            <label class="size-btn" for="size-s">S</label>
+            <input type="radio" id="size-m" name="size" value="M">
+            <label class="size-btn" for="size-m">M</label>
+            <input type="radio" id="size-l" name="size" value="L">
+            <label class="size-btn" for="size-l">L</label>
+            <input type="radio" id="size-xl" name="size" value="XL">
+            <label class="size-btn" for="size-xl">XL</label>
+            <input type="radio" id="size-xxl" name="size" value="XXL">
+            <label class="size-btn" for="size-xxl">XXL</label>
+          </div>
+
+
+          <div class="d-flex mb-3">
+            <button class="btn btn-outline-secondary">-</button>
+            <input type="text" class="form-control w-25 text-center" value="1">
+            <button class="btn btn-outline-secondary">+</button>
+          </div>
+            <button class="btn add-to-cart w-100 mb-3 rounded-pill py-2" style="background: #c9ad90;">Add to Cart</button>
+          
+
+          <h5>Product Info</h5>
+          <p>High-quality funky printed tote bag. Perfect for daily use.</p>
+
+          <h5>Return & Refund Policy</h5>
+          <p>Easy 7-day return policy.</p>
+
+          <h5>Shipping Info</h5>
+          <p>Ships within 3-5 business days.</p>
         </form>
-
-        <h5>Product Info</h5>
-        <p>High-quality funky printed tote bag. Perfect for daily use.</p>
-
-        <h5>Return & Refund Policy</h5>
-        <p>Easy 7-day return policy.</p>
-
-        <h5>Shipping Info</h5>
-        <p>Ships within 3-5 business days.</p>
       </div>
     </div>
   </section>
 
-<%- include('../partials/footer.ejs')%>
+  <%- include('../partials/footer.ejs')%>
