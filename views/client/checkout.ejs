@@ -131,23 +131,28 @@
 								<div><strong>PRODUCT</strong></div>
 								<div><strong>TOTAL</strong></div>
 							</div>
-							<div class="order-products">
+							<!-- <div class="order-products">
 								<div class="order-col">
 									<div>1x Product Name Goes Here</div>
 									<div>$980.00</div>
 								</div>
-								<div class="order-col">
-									<div>2x Product Name Goes Here</div>
-									<div>$980.00</div>
-								</div>
+							</div> -->
+							<%let grandTotal = 0%>
+							<% cart.items.forEach(item => { %>
+								<%const subtotal = item.product.price * item.quantity;
+              					grandTotal += subtotal; %>
+							<div class="order-col">
+								<div><%= item.quantity %>x <%= item.product.name %></div>
+								<div>$<%= (item.product.price * item.quantity).toFixed(2) %></div>
 							</div>
+							<% }) %>
 							<div class="order-col">
 								<div>Shiping</div>
 								<div><strong>FREE</strong></div>
 							</div>
 							<div class="order-col">
 								<div><strong>TOTAL</strong></div>
-								<div><strong class="order-total">$2940.00</strong></div>
+								<div><strong class="order-total">$<%= grandTotal.toFixed(2) %></strong></div>
 							</div>
 						</div>
 						<div class="payment-method">
