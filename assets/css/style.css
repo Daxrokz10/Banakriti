@@ -1083,14 +1083,21 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked+.size-btn , .product-detail .add-to-cart {
-  background: #c9ad90;
+  background-color: #c9ad90;
   color: #fff;
 }
 
 .product-detail .add-to-cart:hover{
-  background: transparent;
+  background-color: transparent;
   border: 1px solid #c9ad90;
   color: #2B2D42;
+}
+
+.delivery-info i{
+  font-size: 20px;
+  background-color: #c9ad90;
+  color: whitesmoke;
+  padding: 13px 15px;
 }
 
 input[type="radio"]:disabled+.size-btn {

@@ -13,7 +13,7 @@
 
       <!-- Details -->
       <div class="col-md-6 product-detail">
-        <form  action="/cart/add/<%= product._id %>" method="post">
+        <form action="/cart/add/<%= product._id %>" method="post">
           <h2 class="fw-medium">
             <%= product.name %>
           </h2>
@@ -37,21 +37,60 @@
 
 
           <div class="d-flex mb-3">
-            <button class="btn btn-outline-secondary">-</button>
+            <a href="/cartIcrement/<%= product._id%>" class="btn btn-outline-secondary">-</a>
             <input type="text" class="form-control w-25 text-center" value="1">
-            <button class="btn btn-outline-secondary">+</button>
+            <a href="/cartDecrement/<%= product._id%>" class="btn btn-outline-secondary">+</a>
           </div>
-            <button class="btn add-to-cart w-100 mb-3 rounded-pill py-2" style="background: #c9ad90;">Add to Cart</button>
-          
+          <button class="btn add-to-cart w-100 mb-3 rounded-pill py-2" >Add to Cart</button>
 
-          <h5>Product Info</h5>
-          <p>High-quality funky printed tote bag. Perfect for daily use.</p>
 
-          <h5>Return & Refund Policy</h5>
-          <p>Easy 7-day return policy.</p>
+          <div class="description border p-3 rounded-4 mb-3">
+            <h4>Product Info</h4>
+            <p>High-quality funky printed tote bag. Perfect for daily use.</p>
+          </div>
 
-          <h5>Shipping Info</h5>
-          <p>Ships within 3-5 business days.</p>
+          <div class="delivery-info border rounded-4 p-2">
+            <h4 class="py-3 ps-2">Shipping</h4>
+            <div class="col-12 d-flex flex-wrap">
+              <div class="col-6">
+                <div class="discount d-flex align-items-center">
+                  <i class="fa fa-solid fa-percent rounded-circle"></i>
+                  <div class="data ms-3">
+                    <h6 class="mb-0 fw-medium text-dark">Discount</h6>
+                    <span>Disc </span>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="return-refund d-flex align-items-center">
+                  <i class="fa fa-solid fa-asterisk rounded-circle"></i>
+                  <div class="data ms-3">
+                    <h6 class="mb-0 fw-medium text-dark">Return & Refund Policy</h6>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 mt-4 pb-4">
+                <div class="delivery d-flex align-items-center">
+                  <i class="fa fa-solid fa-calendar rounded-circle"></i>
+                  <div class="data ms-3">
+                    <h6 class="mb-0 fw-medium text-dark">Delivery Time</h6>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 mt-4 pb-4">
+                <div class="delivery d-flex align-items-center">
+                  <i class="fa fa-solid fa-truck rounded-circle"></i>
+                  <div class="data ms-3">
+                    <h6 class="mb-0 fw-medium text-dark">Estimation Arrive</h6>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
