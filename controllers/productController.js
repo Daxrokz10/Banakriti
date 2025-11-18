@@ -9,3 +9,13 @@ module.exports.getProductPage = async (req, res) => {
         console.log(error.message);
     }
 }
+
+module.exports.postProductPage = async(req,res)=>{
+    try{
+        const product = await Product.findById(req.params.id);
+        const qty = parseInt(req.body.quantity);
+        
+    }catch(error){
+        console.log(error.message);
+    }
+}

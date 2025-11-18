@@ -25,6 +25,8 @@ module.exports.addToCart = async (req, res) => {
   } else {
     const productId = req.params.productId;
     const qty = parseInt(req.body.quantity) || 1;
+    const size = req.body.size;
+    const color = req.body.color;
 
     try {
       let cart = await Cart.findOne({ user: req.user._id });
@@ -32,13 +34,17 @@ module.exports.addToCart = async (req, res) => {
         cart = new Cart({ user: req.user._id, items: [] });
       }
 
+      // Find item with same product, size, and color
       const existing = cart.items.find(
-        (i) => i.product.toString() === productId
+        (i) =>
+          i.product.toString() === productId &&
+          i.size === size &&
+          i.color === color
       );
       if (existing) {
         existing.quantity += qty;
       } else {
-        cart.items.push({ product: productId, quantity: qty });
+        cart.items.push({ product: productId, quantity: qty, size, color });
       }
 
       await cart.save();
