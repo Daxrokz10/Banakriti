@@ -897,7 +897,24 @@ textarea.input {
 /*----------------------------*\
 	product
 \*----------------------------*/
+/* causing the images bellow to be fucked */
+.product-img {
+  width: 100%;
+  height: 250px; /* Set your desired height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f8f8f8;
+}
 
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* causing the images bellow to be fucked */
 .product {
   position: relative;
   margin: 15px 0px;
