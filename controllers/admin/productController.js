@@ -1,7 +1,11 @@
 const Product = require("../../models/productsSchema");
 
+const categories = ['Keychain' , 'Wallart' , 'Games' , 'Miscellaneous'];
+
 module.exports.getAddProduct = (req,res)=>{
-    return res.render('./admin/pages/product/addProduct');
+    return res.render('./admin/pages/product/addProduct',{
+      categories
+    });
 }
 module.exports.postAddProduct = async (req, res) => {
   try {

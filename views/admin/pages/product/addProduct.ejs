@@ -15,7 +15,7 @@
                     <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" required>
                   </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row align-items-center">
                   <label for="price" class="col-sm-2 col-form-label">Price</label>
                   <div class="col-sm-4">
                     <input type="number" class="form-control" id="price" name="price" placeholder="0.00" step="0.01" required>
@@ -29,14 +29,25 @@
                   <label for="description">Description</label>
                   <textarea class="form-control" id="description" name="description" rows="4" placeholder="Short description" required></textarea>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row align-items-center">
                   <label for="category" class="col-sm-2 col-form-label">Category</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="category" name="category" placeholder="Category" required>
+                    <select name="category" id="" class="form-select text-black">
+                      <option value="select category" selected disabled>Select Category</option>
+                   <%categories.forEach((category)=>{ %>
+                      <option value="<%= category%>"><%= category%></option>
+                      <%}) %>
+                    </select>
                   </div>
                   <label for="tags" class="col-sm-2 col-form-label">Tags</label>
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="tags" name="tags" placeholder="comma, separated, tags">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sku" class="form-label">Sku</label>
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" placeholder="Product Sku Here" >
                   </div>
                 </div>
                 <div class="form-group">
