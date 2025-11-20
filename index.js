@@ -35,7 +35,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+const showCart = require('./middlewares/showCart');
+app.use(showCart.showCart)
 app.set('view engine', 'ejs');
 
 app.use('/',require('./routers'));

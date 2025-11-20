@@ -34,14 +34,11 @@
             <input type="radio" id="size-xxl" name="size" value="XXL">
             <label class="size-btn" for="size-xxl">XXL</label>
           </div>
+          <input type="hidden" name="color" value="<%= product.color || 'Yellow' %>">
+          <input type="number" name="quantity" class="form-control w-25 text-center" value="1" min="1">
 
 
-          <div class="d-flex mb-3">
-            <a href="/cartIcrement/<%= product._id%>" class="btn btn-outline-secondary">-</a>
-            <input type="text" class="form-control w-25 text-center" value="1">
-            <a href="/cartDecrement/<%= product._id%>" class="btn btn-outline-secondary">+</a>
-          </div>
-          <button class="btn add-to-cart w-100 mb-3 rounded-pill py-2" >Add to Cart</button>
+          <button class="btn add-to-cart w-100 mb-3 rounded-pill py-2">Add to Cart</button>
 
 
           <div class="description border p-3 rounded-4 mb-3">
