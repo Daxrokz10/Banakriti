@@ -18,7 +18,7 @@
                 <div class="form-group row align-items-center">
                   <label for="price" class="col-sm-2 col-form-label">Price</label>
                   <div class="col-sm-4">
-                    <input type="number" class="form-control" id="price" name="price" placeholder="0.00" step="0.01" required>
+                    <input type="number" class="form-control" id="price" name="price" placeholder="0" required>
                   </div>
                   <label for="stock" class="col-sm-2 col-form-label">Stock</label>
                   <div class="col-sm-4">
@@ -32,10 +32,10 @@
                 <div class="form-group row align-items-center">
                   <label for="category" class="col-sm-2 col-form-label">Category</label>
                   <div class="col-sm-4">
-                    <select name="category" id="" class="form-select text-black">
+                    <select name="category" id="" class="form-select">
                       <option value="select category" selected disabled>Select Category</option>
                    <%categories.forEach((category)=>{ %>
-                      <option value="<%= category%>"><%= category%></option>
+                      <option value="<%= category%>" class="text-black"><%= category%></option>
                       <%}) %>
                     </select>
                   </div>
