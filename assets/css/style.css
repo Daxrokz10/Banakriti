@@ -930,33 +930,41 @@ textarea.input {
   box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #c9ad90;
 }
 
-.product .product-img {
+.product .product-img ,
+.product .product-img1{
   position: relative;
 }
 
-.product .product-img>img {
+.product .product-img>img,
+.product .product-img1>img {
   width: 100%;
 }
 
-.product .product-img .product-label {
+.product .product-img .product-label,
+.product .product-img1 .product-label {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
-.product .product-img .product-label>span {
+.product .product-img .product-label>span,
+.product .product-img1 .product-label>span 
+ {
   border: 2px solid;
   padding: 2px 10px;
   font-size: 12px;
 }
 
-.product .product-img .product-label>span.sale {
+.product .product-img .product-label>span.sale ,
+.product .product-img1 .product-label>span.sale {
   background-color: #FFF;
   border-color: #c9ad90;
   color: #c9ad90;
 }
 
-.product .product-img .product-label>span.new {
+.product .product-img .product-label>span.new ,
+.product .product-img1 .product-label>span.new 
+{
   background-color: #c9ad90;
   border-color: #c9ad90;
   color: #FFF;
