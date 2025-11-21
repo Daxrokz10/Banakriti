@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="main-panel vh-100 w-100">
+  <div class="content-wrapper py-5">
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-12 col-sm-8 offset-sm-2">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title mb-4">Set Countdown Timer</h4>
+              <form action="/admin/countdown" method="POST">
+                <div class="mb-3">
+                  <label for="targetDate" class="form-label">Target Date and Time</label>
+                  <input type="datetime-local" class="form-control" id="targetDate" name="targetDate" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Set Timer</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

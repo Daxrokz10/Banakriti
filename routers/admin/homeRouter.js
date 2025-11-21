@@ -13,4 +13,6 @@ homeRouter.get('/products',passport.userAuth,homeCtrl.getProducts);
 
 homeRouter.get('/gridView',passport.userAuth,homeCtrl.getProdcutGrid);
 
+homeRouter.get('/countdown',passport.userAuth,homeCtrl.getCountdown);
+
 module.exports = homeRouter;
