@@ -1,4 +1,5 @@
 const Product = require('../../models/productsSchema');
+const Countdown = require('../../models/countdownSchema');
 
 module.exports.getHome = (req,res)=>{
     return res.render('./admin/index', { title: "Dashboard", page: "dashboard" });

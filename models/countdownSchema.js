@@ -8,7 +8,7 @@ const countdownSchema = new mongoose.Schema({
     targetDate: {
         type: Date,
         required: true,
-    },
+    }
 });
 
 module.exports = mongoose.model('Countdown', countdownSchema);
