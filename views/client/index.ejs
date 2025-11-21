@@ -69,10 +69,11 @@
 							<h3 class="title">New Products</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">Wallart</a></li>
-									<li><a data-toggle="tab" href="#tab1">Keychain</a></li>
-									<li><a data-toggle="tab" href="#tab1">Games</a></li>
-									<li><a data-toggle="tab" href="#tab1">Miscellaneous</a></li>
+									<li class="<%= selectedCategory === 'all' ? 'active' : ''%>"><a href="/?category=all">All</a></li>
+									<li class="<%= selectedCategory === 'Wallart' ? 'active' : ''%>"><a data-toggle="tab" href="/?category=Wallart">Wallart</a></li>
+									<li class="<%= selectedCategory === 'Keychain' ? 'active' : ''%>"><a data-toggle="tab" href="/?category=Keychain">Keychain</a></li>
+									<li class="<%= selectedCategory === 'Games' ? 'active' : ''%>"><a data-toggle="tab" href="/?category=Games">Games</a></li>
+									<li class="<%= selectedCategory === 'Miscellaneous' ? 'active' : ''%>"><a data-toggle="tab" href="/?category=Miscellaneous">Miscellaneous</a></li>
 								</ul>
 							</div>
 						</div>
