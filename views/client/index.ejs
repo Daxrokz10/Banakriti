@@ -69,17 +69,15 @@
 						<div class="section-nav">
 							<ul class="section-tab-nav tab-nav">
 								<li class="<%= selectedCategory === 'all' ? 'active' : ''%>"><a
-										href="/?category=all#product-tab" data-category="ALl">All</a></li>
+										href="/?category=all">All</a></li>
 								<li class="<%= selectedCategory === 'Wallart' ? 'active' : ''%>"><a data-toggle="tab"
-										href="/?category=Wallart#product-tab" data-category="Wallart">Wallart</a></li>
+										href="/?category=Wallart">Wallart</a></li>
 								<li class="<%= selectedCategory === 'Keychain' ? 'active' : ''%>"><a data-toggle="tab"
-										href="/?category=Keychain#product-tab" data-category="k=Keychain">Keychain</a>
-								</li>
+										href="/?category=Keychain">Keychain</a></li>
 								<li class="<%= selectedCategory === 'Games' ? 'active' : ''%>"><a data-toggle="tab"
-										href="/?category=Games#product-tab" data-category="Games">Games</a></li>
+										href="/?category=Games">Games</a></li>
 								<li class="<%= selectedCategory === 'Miscellaneous' ? 'active' : ''%>"><a
-										data-toggle="tab" href="/?category=Miscellaneous#product-tab"
-										data-category="Miscellaneous">Miscellaneous</a></li>
+										data-toggle="tab" href="/?category=Miscellaneous">Miscellaneous</a></li>
 							</ul>
 						</div>
 					</div>
@@ -89,14 +87,13 @@
 				<!-- Products tab & slick -->
 				<div class="col-md-12">
 					<div class="row">
-						<div class="products-tabs" id="product-tab">
+						<div class="products-tabs">
 							<!-- tab -->
 							<div id="tab1" class="tab-pane active">
 								<div class="products-slick" data-nav="#slick-nav-1">
 									<!-- product -->
 									<% products.forEach(product=>{ %>
-										<% if(product.tags && product.tags.includes('New')){%>
-											<div class="product">
+										<div class="product">
 											<div class="product-img1">
 												<img src="<%= product.image %>" alt="">
 												<div class="product-label">
@@ -162,33 +159,49 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="hot-deal">
+						<div id="hot-deal-timer" data-target-date="<%= countdown ? countdown.targetDate : '' %>">
 						<ul class="hot-deal-countdown">
 							<li>
 								<div>
-									<h3>02</h3>
+									<h3>
+										<%= countdown ? Math.floor((new Date(countdown.targetDate) - new Date()) / (1000
+											* 60 * 60 * 24)) : '' %>
+									</h3>
 									<span>Days</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>10</h3>
+									<h3>
+										<%= countdown ? Math.floor((new Date(countdown.targetDate) - new Date()) / (1000
+											* 60 * 60)) % 24 : '' %>
+									</h3>
 									<span>Hours</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>34</h3>
+									<h3>
+										<%= countdown ? Math.floor((new Date(countdown.targetDate) - new Date()) / (1000
+											* 60)) % 60 : '' %>
+									</h3>
 									<span>Mins</span>
 								</div>
 							</li>
 							<li>
 								<div>
-									<h3>60</h3>
+									<h3>
+										<%= countdown ? Math.floor((new Date(countdown.targetDate) - new Date()) / 1000)
+											% 60 : '' %>
+									</h3>
 									<span>Secs</span>
 								</div>
 							</li>
 						</ul>
-						<h2 class="text-uppercase">new set drops in</h2>
+						</div>
+						<h2 class="text-uppercase">
+							<%= countdown ? countdown.title : '' %>
+						</h2>
 						<p>New Collection Up to 50% OFF</p>
 						<a class="primary-btn cta-btn" href="#">Shop now</a>
 					</div>
@@ -747,6 +760,28 @@
 	<!-- /NEWSLETTER -->
 
 	<%- include('./partials/footer.ejs') %>
-		
+		<script>
+			function updateCountdown() {
+				var hotDeal = document.getElementById('hot-deal-timer');
+				var targetDateStr = hotDeal.getAttribute('data-target-date');
+				var targetDate = new Date(targetDateStr);
+				var now = new Date();
+				var diff = targetDate - now;
+
+				var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				var hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+				var mins = Math.floor(diff / (1000 * 60)) % 60;
+				var secs = Math.floor(diff / 1000) % 60;
+
+				document.querySelector('.hot-deal-countdown li:nth-child(1) h3').textContent = days;
+				document.querySelector('.hot-deal-countdown li:nth-child(2) h3').textContent = hours;
+				document.querySelector('.hot-deal-countdown li:nth-child(3) h3').textContent = mins;
+				document.querySelector('.hot-deal-countdown li:nth-child(4) h3').textContent = secs;
+			}
+
+			setInterval(updateCountdown, 1000);
+			updateCountdown(); // Initialize immediately
+
+		</script>
 
 		</html>
