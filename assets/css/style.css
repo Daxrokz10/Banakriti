@@ -761,6 +761,7 @@ textarea.input {
   position: relative;
   overflow: hidden;
   margin: 15px 0px;
+  height: 150px;
 }
 
 .shop:before {
@@ -898,7 +899,7 @@ textarea.input {
 	product
 \*----------------------------*/
 /* causing the images bellow to be fucked */
-.product-img {
+.product-img1 {
   width: 100%;
   height: 250px; /* Set your desired height */
   display: flex;
@@ -908,7 +909,7 @@ textarea.input {
   background: #f8f8f8;
 }
 
-.product-img img {
+.product-img1 img {
   width: 100%;
   height: 100%;
   object-fit: contain;
